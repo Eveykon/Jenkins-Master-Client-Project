@@ -1,8 +1,3 @@
-def COLOR_MAP = [
-    'SUCCESS': 'good', 
-    'FAILURE': 'danger',
-    'UNSTABLE': 'danger'
-]
 pipeline {
   agent {
     label 'Maven-Build-Env' // Use the Maven slave node for this pipeline
@@ -37,7 +32,7 @@ pipeline {
         steps {
             sh  """mvn sonar:sonar \
                    -Dsonar.projectKey=Maven-JavaWebApp \
-                   -Dsonar.host.url=http://172.31.6.30:9000 \
+                   -Dsonar.host.url=http://172.31.0.85:9000 \
                    -Dsonar.login=90b6f123d85e2d4c780c28776e819c22a054e71e"""
         }
     }
@@ -60,4 +55,5 @@ pipeline {
         message: "*${currentBuild.currentResult}:* Job Name '${env.JOB_NAME}' build ${env.BUILD_NUMBER} \n Build Timestamp: ${env.BUILD_TIMESTAMP} \n Project Workspace: ${env.WORKSPACE} \n More info at: ${env.BUILD_URL}"
     }
   }
+} 
 }
