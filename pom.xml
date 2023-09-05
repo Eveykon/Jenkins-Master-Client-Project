@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>Java-WebApp-Project-Snapshot</artifactId>
+	<artifactId>JavaWebApp</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>Java-WebApp-Project-Snapshot</name>
+	<name>JavaWebApp</name>
 	<description>JavaWebApp project for Spring Boot</description>
 
 	<properties>
